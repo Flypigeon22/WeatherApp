@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 
 namespace WeatherApp.Models
 {
+    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class City
     {
         public int id { get; set; }
@@ -91,6 +92,7 @@ namespace WeatherApp.Models
         public int deg { get; set; }
         public double gust { get; set; }
     }
+
 
 
 
