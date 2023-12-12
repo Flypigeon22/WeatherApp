@@ -34,6 +34,7 @@ namespace WeatherApp.Models
     public class List
     {
         public int dt { get; set; }
+        public string dateTime => UtcTimeLibrary.UtcTimeStamp.ConvertToUtc(dt);
         public Main main { get; set; }
         public List<Weather> weather { get; set; }
         public Clouds clouds { get; set; }
@@ -85,6 +86,8 @@ namespace WeatherApp.Models
         public string main { get; set; }
         public string description { get; set; }
         public string icon { get; set; }
+        //public string fullIcon => string.Format(" https://openweathermap.org/img/wn/{0}@2x.png", icon);
+        public string customIcon => string.Format("icon_{0}.png", icon);
     }
 
     public class Wind
